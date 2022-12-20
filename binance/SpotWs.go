@@ -233,5 +233,6 @@ func (s *SpotWs) tradeHandle(data json2.RawMessage, pair goex.CurrencyPair) erro
 		trade.Type = goex.SELL_MARKET
 	}
 
+	s.tradeCallFn(&trade)
 	return nil
 }
